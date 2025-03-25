@@ -5,9 +5,7 @@ import Footer from '../../components/Footer'; // Assuming your modern Footer com
 const AboutPage = () => {
     return (
         <div className="font-sans bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
-            {/* Navbar */}
 
-            {/* Hero Section */}
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 py-24 relative overflow-hidden">
                 <div className="absolute inset-0 bg-pattern opacity-10" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.4\" fill-rule=\"evenodd\"%3E%3Ccircle cx=\"3\" cy=\"3\" r=\"3\"/%3E%3Ccircle cx=\"13\" cy=\"13\" r=\"3\"/%3E%3C/g%3E%3C/svg%3E')" }}></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -86,24 +84,26 @@ const AboutPage = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                     {[
                         {
-                            name: 'Jane Doe',
-                            role: 'Founder & CEO',
-                            image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                            name: 'Md Ramjan Khan',
+                            role: 'Founder & Developer',
+                            // image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                            image: 'https://res.cloudinary.com/dzeepo7ec/image/upload/v1742913644/IMG_20241026_171210_fugcnq.jpg',
                         },
                         {
-                            name: 'John Smith',
-                            role: 'CTO',
-                            image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                            name: 'Praveen Kumar',
+                            role: 'Tester',
+                            // image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                            image: 'https://res.cloudinary.com/dzeepo7ec/image/upload/v1742913969/praveen_apipn5.jpg'
                         },
                         {
-                            name: 'Emily Johnson',
-                            role: 'Head of Design',
-                            image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                            name: 'Eklavya Kumar Prasad',
+                            role: 'Co-Developer',
+                            image: 'https://res.cloudinary.com/dzeepo7ec/image/upload/v1742914131/Eklavya_fd2mnl.jpg'
                         },
                         {
-                            name: 'Michael Lee',
-                            role: 'Marketing Lead',
-                            image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+                            name:'Ayush Kumar',
+                            role: 'Marketing Manager',
+                            image: 'https://res.cloudinary.com/dzeepo7ec/image/upload/v1742914124/aysuh_jmkbqk.jpg',
                         },
                     ].map((member, index) => (
                         <div

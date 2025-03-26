@@ -191,8 +191,8 @@ HireMe/
 
 ## Future Enhancements
 - Add job category filtering on the frontend.
-- Implement real-time notifications for messages.
-- Add admin panel for job approval and user management.
+- Implement real-time notifications for messages also the real time chating.
+- Add real time chat assistance (ChatBot).
 
 
 ## Contact

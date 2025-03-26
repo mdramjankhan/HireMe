@@ -40,7 +40,7 @@ const FrontPage = () => {
                 { id: '1', title: 'Software Engineer', company: 'Tech Corp', location: 'Remote', salary: '$90k-$120k' },
                 { id: '2', title: 'Sales Manager', company: 'Salesify', location: 'New York', salary: '$80k-$110k' },
                 { id: '3', title: 'Graphic Designer', company: 'Creative Studio', location: 'San Francisco', salary: '$60k-$85k' },
-            ]); // Fallback static data
+            ]); 
         } finally {
             setLoading(false);
         }
@@ -60,7 +60,6 @@ const FrontPage = () => {
 
     return (
         <div className="font-sans bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
-            {/* <Toaster position="top-right" /> */}
 
             {/* Hero Section */}
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 py-24 relative overflow-hidden">
@@ -159,7 +158,7 @@ const FrontPage = () => {
                                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{job.title}</h3>
                                     <p className="text-gray-600 mb-2">{job.company}</p>
                                     <p className="text-gray-500 mb-3">{job.location}</p>
-                                    <p className="text-sm text-green-600 font-medium mb-4">{job.salary}</p>
+                                    <p className="text-sm text-green-600 font-medium mb-4">₹{job.salary}</p>
                                     <button
                                         onClick={() => handleApplyJob(job.id, job.title)}
                                         className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-2 rounded-full hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center w-full"

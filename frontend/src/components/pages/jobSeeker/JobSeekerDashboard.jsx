@@ -367,7 +367,7 @@ const JobSeekerDashboard = () => {
                                 <p className="text-gray-500 mb-1">{job.location}</p>
                                 <p className="text-gray-500 mb-1">{job.type}</p>
                                 <p className="text-gray-500 mb-2">{job.category}</p>
-                                <p className="text-sm text-green-600 font-medium mb-3">{job.salary}</p>
+                                <p className="text-sm text-green-600 font-medium mb-3">₹{job.salary}</p>
                                 <p className="text-xs text-gray-400 mb-4">Posted {job.posted}</p>
                                 <button
                                     onClick={() => handleApplyJob(job.id, job.title)}
@@ -474,7 +474,7 @@ const JobSeekerDashboard = () => {
                                     <p className="text-gray-500 mb-1">{job.location}</p>
                                     <p className="text-gray-500 mb-1">{job.type}</p>
                                     <p className="text-gray-500 mb-2">{job.category}</p>
-                                    <p className="text-sm text-green-600 font-medium mb-3">{job.salary}</p>
+                                    <p className="text-sm text-green-600 font-medium mb-3">₹{job.salary}</p>
                                     <p className="text-xs text-gray-400 mb-4">Posted {job.posted}</p>
                                     <button
                                         onClick={() => handleApplyJob(job.id, job.title)}

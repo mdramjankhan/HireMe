@@ -21,7 +21,6 @@ require('./models/Message');
 //socket.io setup
 const io = socketIo(server, {
   cors: {
-    origin: 'http://127.0.0.1:5173', 
     methods: ['GET', 'POST'],
     credentials: true,
   },
@@ -43,17 +42,19 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 
-const allowedOrigins =  ['http://localhost:5173']; 
-app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
-}));
+// const allowedOrigins =  ['http://localhost:5173']; 
+// app.use(cors({
+//   origin: (origin, callback) => {
+//     if (!origin || allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   credentials: true,
+// }));
+
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
@@ -67,6 +68,11 @@ io.on('connection', (socket) => {
 app.use((req, res, next) => {
   req.io = io;
   next();
+});
+
+// default route 
+app.get('/',(req,res)=> {
+  res.send('Hello World!');
 });
 
 // Routes
